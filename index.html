@@ -922,15 +922,15 @@ z-index: 2;
       </div>
 
       <select
-        id="rowsPerPage"
-        class="analysis-search"
-        style="width:100px;min-width:100px;max-width:100px"
-      >
-        <option value="10">10</option>
-        <option value="25">25</option>
-        <option value="50">50</option>
-        <option value="all">All</option>
-      </select>
+  id="rowsPerPage"
+  class="analysis-search"
+  style="width:100px;min-width:100px;max-width:100px"
+>
+  <option value="10">10</option>
+  <option value="25">25</option>
+  <option value="50">50</option>
+  <option value="all" selected>All</option>
+</select>
     </div>
 
   </div>
@@ -1124,7 +1124,7 @@ const sheetUrl =
 let allRows = [];
 let filteredRows = [];
 let currentPage = 1;
-let rowsPerPage = 10;
+let rowsPerPage = "all";
 
 fetch(sheetUrl)
   .then(res => res.text())
