@@ -865,46 +865,46 @@
     </div>
 
     <div class="analysis-toolbar reveal">
-      <div>
-        <div class="flex flex-col md:flex-row gap-4 items-start md:items-end">
 
-  <div>
-    <div class="mono text-xs mb-2" style="color:var(--gold);letter-spacing:.12em">
-      SEARCH DATABASE
+  <div class="flex flex-col md:flex-row gap-4 items-end">
+
+    <div>
+      <div class="mono text-xs mb-2" style="color:var(--gold);letter-spacing:.12em">
+        SEARCH DATABASE
+      </div>
+
+      <input
+        type="text"
+        id="search"
+        class="analysis-search"
+        placeholder="Search company or ticker..."
+      >
     </div>
 
-    <input
-      type="text"
-      id="search"
-      class="analysis-search"
-      placeholder="Search company or ticker..."
-    >
+    <div>
+      <div class="mono text-xs mb-2" style="color:var(--gold);letter-spacing:.12em">
+        SHOW
+      </div>
+
+      <select
+        id="rowsPerPage"
+        class="analysis-search"
+        style="width:170px;min-width:170px;max-width:170px"
+      >
+        <option value="10">10</option>
+        <option value="25">25</option>
+        <option value="50">50</option>
+        <option value="all">All</option>
+      </select>
+    </div>
+
   </div>
 
-  <div>
-    <div class="mono text-xs mb-2" style="color:var(--gold);letter-spacing:.12em">
-      SHOW
-    </div>
-
-    <select
-      id="rowsPerPage"
-      class="analysis-search"
-      style="max-width:170px"
-    >
-      <option value="10">10 per page</option>
-      <option value="25">25 per page</option>
-      <option value="50">50 per page</option>
-      <option value="all">View All</option>
-    </select>
-
+  <div class="analysis-count mono" id="rowCount">
+    Loading companies...
   </div>
 
 </div>
-
-      <div class="analysis-count mono" id="rowCount">
-        Loading companies...
-      </div>
-    </div>
 
     <div class="analysis-table-wrap reveal">
       <table class="analysis-table">
